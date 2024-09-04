@@ -1,0 +1,226 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@section Container{
+    <style>
+        .search-box__cont{display:unset; text-align:center;}
+        .search-box__cont > div:not(:last-child){padding-bottom:10px;}
+        .search-box__input.search{width:100%!important;}
+    </style>
+    <script src="~/Scripts/Ocean/order.js"></script>
+    <section class="container">
+        <div class="main_contents">
+            <div class="search-box">
+                <div class="search-box__cont">
+                    <div class="search-box__tit">
+                        <p>화물조회</p>
+                    </div>
+                    <div class="search-box__input search">
+                        <input type="text" placeholder="스캔 및 코드번호 입력" />
+                    </div>
+                    <div class="search-box__result">
+                        <p>House B/L No : <span>587838410355</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="result">
+                <div class="result-list">
+                    <div class="list__plural">
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>통관구분</p>
+                            </div>
+                            <div class="list-info">
+                                <p>목록</p>
+                            </div>
+                        </div>
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>HSN</p>
+                            </div>
+                            <div class="list-info">
+                                <p>1568</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__plural">
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>검사구분</p>
+                            </div>
+                            <div class="list-info">
+                                <p class="info__red">취하</p>
+                            </div>
+                        </div>
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>검사순번</p>
+                            </div>
+                            <div class="list-info">
+                                <p class="info__red">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__single">
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>수입진행구분</p>
+                            </div>
+                            <div class="list-info">
+                                <p>통관목록심사완료</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__plural">
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>화물위치</p>
+                            </div>
+                            <div class="list-info">
+                                <p>반출(세관)</p>
+                            </div>
+                        </div>
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>화물이력</p>
+                            </div>
+                            <div class="list-info">
+                                <p>2024.03.04</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__single">
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>M B/L No.</p>
+                            </div>
+                            <div class="list-info">
+                                <p>HSLI024320700304</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__plural">
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>입항일자</p>
+                            </div>
+                            <div class="list-info">
+                                <p>2024.02.28</p>
+                            </div>
+                        </div>
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>입항지</p>
+                            </div>
+                            <div class="list-info">
+                                <p>KRINC</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__plural">
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>출항일자</p>
+                            </div>
+                            <div class="list-info">
+                                <p>2024.02.27</p>
+                            </div>
+                        </div>
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>출발지</p>
+                            </div>
+                            <div class="list-info">
+                                <p>KRINC</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__single">
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>품명</p>
+                            </div>
+                            <div class="list-info">
+                                <p>EARPHONEEARPHONE 1EARPHONE 1EARPHONEEARPHONE 1EARPHONE 1EARPHONEEARPHONE 1EARPHONE 1EARPHONEEARPHONE 1EARPHONE 1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__single">
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>고객</p>
+                            </div>
+                            <div class="list-info">
+                                <p>SAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQISAIQI</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__plural">
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>대리점</p>
+                            </div>
+                            <div class="list-info">
+                                <p>ZHL01</p>
+                            </div>
+                        </div>
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>수화인</p>
+                            </div>
+                            <div class="list-info">
+                                <p>JINYONG</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__plural">
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>전화번호</p>
+                            </div>
+                            <div class="list-info">
+                                <p>010-3468-3496</p>
+                            </div>
+                        </div>
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>결제</p>
+                            </div>
+                            <div class="list-info">
+                                <p>신용</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__plural">
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>배송사</p>
+                            </div>
+                            <div class="list-info">
+                                <p>-</p>
+                            </div>
+                        </div>
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>구분</p>
+                            </div>
+                            <div class="list-info">
+                                <p>홀드</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list__single">
+                        <div class="list-cont">
+                            <div class="list-title">
+                                <p>요청사항</p>
+                            </div>
+                            <div class="list-info">
+                                <p>경동착불</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

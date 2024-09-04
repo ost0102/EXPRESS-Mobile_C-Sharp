@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@section Container{
+    <script src="~/Scripts/Ocean/orderlist.js"></script>
+    <script src="~/Scripts/API/jquery.datetimepicker.full.js"></script>
+    <section class="container">
+        <div class="main_contents">
+            <div class="search-box">
+                <div class="search-box__cont order">
+                    <div class="search-box__title" style="padding-bottom:0;">
+                        <p>화물조회</p>
+                    </div>
+                    <div class="search-box__input search" style="position:relative;">
+                        <input type="text" placeholder="스캔 및 코드번호 입력" style="background:#fff;" /><button type="button" style="width:40px; cursor:pointer; border:none; background:none; position:absolute; top:50%; right:0; transform:translateY(-50%);"><img src="~/Images/icn_search2.png" /></button>
+                    </div>
+                </div>
+                <div class="search-box__cont">
+                    <div class="search-box__title">
+                        <p>입항일자</p>
+                    </div>
+                    <div class="search-box__input">
+                        <div class="search_date">
+                            <div class="date_input">
+                                <input type="text" id="StartDate" class="datepicker start_date" maxlength="8" placeholder="입항일자 기간">
+                            </div>
+                            <span>~</span>
+                            <div class="date_input">
+                                <input type="text" id="EndDate" class="datepicker end_date" maxlength="8" placeholder="입항일자 기간">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-box__cont">
+                    <div class="search-box__title">
+                        <p>거래구분</p>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="Chk"/>
+                        <label for="Chk"></label>
+                    </div>
+                    <div class="search-box__select">
+                        <select>
+                            <option>전자개인(A)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+<script src="~/Scripts/Ocean/orderlist.js"></script>

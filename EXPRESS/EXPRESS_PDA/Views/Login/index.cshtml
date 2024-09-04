@@ -1,0 +1,118 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/EXPRESS_PDA.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/fonts/fonts.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="~/Scripts/js/Common.js"></script>
+    <script src="~/Scripts/Login/Login.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title></title>
+</head>
+<body style="background: url(/Images/login_bg.png) no-repeat 55% 28%;">
+    <div id="wrap" style="padding-bottom:40px;">
+        <div class="content">
+            <div class="login_visual">
+                <div class="login-title">
+                    <p class="title-top">ELVIS</p>
+                    <p class="title-top">EXPRESS</p>
+                    <p class="title-bottom">Management System</p>
+                    <img src="~/Images/login_img.png" class="login_bg">
+                </div>
+                <div class="login-cont">
+                    <!-- 업체코드 없을때 -->
+                    <div class="login-type">
+                        <div class="login_box">
+                            <div class="login-input_box">
+                                <div class="login-input">
+                                    <div class="login-int">
+                                        <input type="text" id="CUST_CD" placeholder="회사코드" />
+                                    </div>
+                                    <div class="login-int">
+                                        <input type="text" id="USR_ID" placeholder="사용자 ID" />
+                                    </div>
+                                    <div class="login-int">
+                                        <input type="password" id="USR_PWD" placeholder="비밀번호 " />
+                                    </div>
+                                </div>
+                                <div class="chk">
+                                    <div>
+                                        <span class="warn warn_office">*회사 코드를 입력하세요.</span>
+                                        <span class="warn warn_id">*아이디를 입력하세요.</span>
+                                        <span class="warn warn_pw">*비밀번호를 입력하세요.</span>
+                                        <span class="warn warn_login">로그인 정보가 없습니다. 다시 시도해주세요.</span>
+                                    </div>
+                                    <div>
+                                        <span class="check">
+                                            <input type="checkbox" id="login_keep" name="login_keep">
+                                            <label for="login_keep">Remember me</label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <a class="login-btn">
+                                    Login
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Addr. 서울특별시 금천구 가산디지털2로 123, 313호</p>
+        <p>(가산동, 월드메르디앙 2차) Tel. 1522-7422</p>
+        <p>© 2024 Yangjae IT .  All Rights Reserved.</p>
+    </footer>
+    <!-- alert -->
+    <div class="layer_zone">
+        <div class="layer_wrap">
+            <div class="layer_inwrap">
+                <article class="layer_cont">
+                    <div class="layer_tit">
+                        <h3 class="tit">ERROR</h3>
+                    </div>
+                    <div class="alert_cont">
+                        <div class="inner">
+                            <p>1열 오류</p>
+                            <p>2열 오류</p>
+                            <p>3열 오류</p>
+                        </div>
+                        <div class="close_btn">
+                            <button type="button" class="close" id="AlertClose">확인</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- alert -->
+    <div class="layer_zone" id="alert01">
+        <div class="layer_wrap">
+            <div class="layer_inwrap">
+                <article class="layer_cont" style="max-width:300px;">
+                    <div class="alert_cont">
+                        <div class="inner">
+                            <div class="inner_cont">
+                                <img src="~/Images/icn_alert.png" />
+                                <p>개인통관부호 검증 중 입니다.</p>
+                            </div>
+                        </div>
+                        <div class="close_btn alert_btn">
+                            <button type="button" class="confirm2 close" onclick="layerClose('#alert01');">확인</button>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

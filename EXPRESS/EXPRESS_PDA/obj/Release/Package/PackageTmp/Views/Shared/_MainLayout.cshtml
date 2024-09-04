@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="~/Content/EXPRESS_PDA.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/fonts/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/Content/css/slick.columnpicker.css" type="text/css" />
+    <link rel="stylesheet" href="/Content/css/slick.customtooltip.css" type="text/css" />
+    <link rel="stylesheet" href="/Content/css/slick-icons.css" type="text/css" />
+    <link rel="stylesheet" href="/Content/css/slick-alpine-theme.css" type="text/css" />
+    <link rel="stylesheet" href="/Content/css/slick.rowdetailview.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="~/Scripts/js/Common.js"></script>
+    <script src="~/Scripts/Login/Login.js"></script>
+    <script src="~/Scripts/API/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs/Sortable.min.js"></script>
+
+    <script src="/Scripts/jquery.jsonp-2.4.min.js"></script>
+    <script src="/Scripts/API/slick.core.js"></script>
+    <script src="/Scripts/API/slick.interactions.js"></script>
+    <script src="/Scripts/API/slick.checkboxselectcolumn.js"></script>
+    <script src="/Scripts/API/slick.grid.js"></script>
+    <script src="/Scripts/API/slick.remotemodel.js"></script>
+    <script src="/Scripts/API/slick.cellrangedecorator.js"></script>
+    <script src="/Scripts/API/slick.cellrangeselector.js"></script>
+    <script src="/Scripts/API/slick.cellselectionmodel.js"></script>
+    <script src="/Scripts/API/slick.rowselectionmodel.js"></script>
+    <script src="/Scripts/API/slick.customtooltip.js"></script>
+    <script src="/Scripts/API/slick.editors.js"></script>
+    <script src="/Scripts/API/slick.dataview.js"></script>
+    <script src="/Scripts/API/slick.formatters.js"></script>
+    <script src="/Scripts/API/slick.pager.js"></script>
+    <script src="/Scripts/API/slick.columnpicker.js"></script>
+    <script src="/Scripts/API/slick.rowdetailview.js"></script>
+    <script src="/Scripts/API/xlsx.full.min.js"></script>
+    <script src="~/Scripts/js/Common.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title></title>
+</head>
+<body>
+    <div id="wrap" class="">
+        <div id="header">
+            <div class="header_cont">
+                <p class="header_title">ELVIS-EXPRESS</p>
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <span style="font-size:18px; color:#e7eded;" id="USR_ID">양재아이티</span>
+                    <img src="~/Images/logout.png" />
+                </div>
+            </div>
+        </div>
+        @RenderSection("container", required: false)
+    </div>
+    <footer class="footer">
+        <p>Addr. 서울특별시 금천구 가산디지털2로 123, 313호</p>
+        <p>(가산동, 월드메르디앙 2차) Tel. 1522-7422</p>
+        <p>© 2024 Yangjae IT .  All Rights Reserved.</p>
+    </footer>
+    <!-- alert -->
+    <!-- 에러 alert -->
+    <div class="layer_zone">
+        <div class="layer_wrap">
+            <div class="layer_inwrap">
+                <article class="layer_cont">
+                    <div class="layer_tit">
+                        <h3 class="tit">ERROR</h3>
+                    </div>
+                    <div class="alert_cont">
+                        <div class="inner">
+                            <p>1열 오류</p>
+                            <p>2열 오류</p>
+                            <p>3열 오류</p>
+                        </div>
+                        <div class="close_btn">
+                            <button type="button" class="close" id="AlertClose">확인</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- 에러 alert -->
+    <!-- 프로그레스 alert -->
+    <div class="layer_zone" id="ProgressPop" style="display:none;">
+        <div class="layer_wrap">
+            <div class="layer_inwrap">
+                <article class="layer_cont">
+                    <div class="layer_tit">
+                        <h3 class="tit">Progress</h3>
+                    </div>
+                    <div class="alert_cont">
+                        <div class="inner">
+                            <div class="progress_area">
+                                <p class="progress_title">진행률<span class="progress_per" id="Progress_percent"></span>%</p>
+                                <div class="dash-progress">
+                                    <div class="dash-progress__bar per0"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress_step__cont">
+                            <div class="progresss_step" id="Progress_Type">
+                                <div class="pro_stat yet" id="Addr_Div">
+                                    <div class="pro_stat_img">
+                                        <img id="Addr_Confirm" src="~/Images/pro_yet.png" />
+                                    </div>
+                                    <div class="pro_stat-text">
+                                        <p class="ing">우편번호 검증 중</p>
+                                    </div>
+                                </div>
+                                <div class="pro_stat yet" id="Person_Div">
+                                    <div class="pro_stat_img">
+                                        <img id="Person_Confirm" src="~/Images/pro_yet.png" />
+                                    </div>
+                                    <div class="pro_stat-text">
+                                        <p class="on">개인통관부호 검증 중</p>
+                                    </div>
+                                </div>
+                                <div class="pro_stat yet" id="Test_Div">
+                                    <div class="pro_stat_img">
+                                        <img id="Test_Confirm" src="~/Images/pro_yet.png" />
+                                    </div>
+                                    <div class="pro_stat-text">
+                                        <p>통관 분류 항목 검증 중</p>
+                                    </div>
+                                </div>
+                                @*<div class="pro_stat yet" id="Eng_Div">
+                                        <div class="pro_stat_img">
+                                            <img id="Eng_Confirm" src="~/Images/pro_yet.png" />
+                                        </div>
+                                        <div class="pro_stat-text">
+                                            <p>영문 변화 중</p>
+                                        </div>
+                                    </div>*@
+                            </div>
+                        </div>
+                        <div class="close_btn">
+                            <button type="button" class="close" id="AlertClose">확인</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- 프로그레스 alert -->
+    <!-- 엑셀업로드 alert -->
+    <div class="layer_zone" id="_Upload">
+        <div class="layer_wrap">
+            <div class="layer_inwrap">
+                <article class="layer_cont">
+                    <div class="layer_tit">
+                        <h3 class="tit">EXCEL UPLOAD</h3>
+                        <button type="button" class="close" id="AlertClose"></button>
+                    </div>
+                    <div class="alert_cont">
+                        <div class="inner">
+                            <div class="file_cus">
+                                <label>
+                                    <span>Excel Upload</span>
+                                    <input type="file" id="fileInput" accept=".xlsx, .xls">
+                                    <span class="file_name">파일을 선택해주세요.</span>
+                                    <span class="file_btn">파일선택</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="save_btn">
+                            <button type="button" id="btnSave"><img src="~/Images/save.png" />SAVE</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- 엑셀업로드 alert -->
+    <!-- alert -->
+</body>
+</html>
